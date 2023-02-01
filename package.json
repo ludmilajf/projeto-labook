@@ -1,0 +1,22 @@
+{
+  "name": "projeto-labook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "clear && node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludmilajf/projeto-labook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ludmilajf/projeto-labook/issues"
+  },
+  "homepage": "https://github.com/ludmilajf/projeto-labook#readme"
+}
