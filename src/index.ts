@@ -1,18 +1,22 @@
 import express, { Request, Response } from 'express'
 import cors from 'cors'
+import dotenv from 'dotenv'
+import { userRouter } from './router/userRouter'
+
+dotenv.config()
 
 const app = express()
 
 app.use(express.json())
 app.use(cors())
 
-//TESTE
-app.get("/ping", async (req: Request, res: Response) => {
-    try{
-        res.status(200).send("Pong")
-    } catch {
+app.listen(Number(process.env.PORT), () => {
+    console.log(`Servidor rodando na porta ${Number(process.env.PORT)}`)
+})
 
-    }
+//TESTE
+app.get("/ping", (req: Request, res: Response) => {
+        res.status(200).send("Pong!")
 })
 
 //createUser (signup)
@@ -23,6 +27,8 @@ app.post("/users", async (req: Request, res: Response) => {
 
     }
 })
+
+app.use("/users", userRouter)
 
 //getUser (login)
 app.get("/user", async (req: Request, res: Response) => {

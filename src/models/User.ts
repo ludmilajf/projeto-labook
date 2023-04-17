@@ -1,4 +1,4 @@
-import { UserDB, UserModel, USER_ROLES } from "../types"
+import { UserDB, UserModel, USER_ROLES } from "../types";
 
 export class User {
     constructor(
@@ -8,9 +8,9 @@ export class User {
         private password: string,
         private role: USER_ROLES,
         private createdAt: string
-    ) { }
+    ) {}
 
-    public getId(): string {
+    public getId(): string{
         return this.id
     }
 
@@ -18,7 +18,7 @@ export class User {
         this.id = value
     }
 
-    public getName(): string {
+    public getName(): string{
         return this.name
     }
 
@@ -26,7 +26,7 @@ export class User {
         this.name = value
     }
 
-    public getEmail(): string {
+    public getEmail(): string{
         return this.email
     }
 
@@ -34,7 +34,7 @@ export class User {
         this.email = value
     }
 
-    public getPassword(): string {
+    public getPassword(): string{
         return this.password
     }
 
@@ -42,7 +42,7 @@ export class User {
         this.password = value
     }
 
-    public getRole(): USER_ROLES {
+    public getRole(): USER_ROLES{
         return this.role
     }
 
@@ -50,7 +50,7 @@ export class User {
         this.role = value
     }
 
-    public getCreatedAt(): string {
+    public getCreatedAt(): string{
         return this.createdAt
     }
 
@@ -58,22 +58,22 @@ export class User {
         this.createdAt = value
     }
 
-    public toDBModel(): UserDB {
+    public toDBModel(): UserDB{
         return {
-            id: this.id, 
+            id: this.id,
             name: this.name,
-            email: this.email, 
+            email: this.email,
             password: this.password,
             role: this.role,
             created_at: this.createdAt
         }
     }
 
-    public toBusinessModel(): UserModel {
-        return {
-            id: this.id, 
+    public toBusinessModel(): UserModel{
+        return{
+            id: this.id,
             name: this.name,
-            email: this.email, 
+            email: this.email,
             password: this.password,
             role: this.role,
             createdAt: this.createdAt
